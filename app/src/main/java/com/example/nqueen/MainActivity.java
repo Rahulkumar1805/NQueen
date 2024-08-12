@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         set.setOnClickListener(view -> {
             n = Integer.parseInt(n_value.getSelectedItem().toString());
             createGrid(n);
+
         });
 
         check = findViewById(R.id.check);
@@ -100,6 +101,9 @@ public class MainActivity extends AppCompatActivity {
                 param.columnSpec = GridLayout.spec(j, 1f);
                 param.rowSpec = GridLayout.spec(i, 1f);
                 button.setLayoutParams(param);
+
+                button.setBackgroundResource(R.drawable.cellbackground);
+
                 gridLayout.addView(button);
             }
         }
